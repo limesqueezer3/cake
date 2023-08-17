@@ -23,6 +23,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.cupcake.databinding.FragmentSummaryBinding
 
+
 /**
  * [SummaryFragment] contains a summary of the order details with a button to share the order
  * via another app.
@@ -47,6 +48,7 @@ class SummaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+            viewModel = sharedViewModel
             sendButton.setOnClickListener { sendOrder() }
         }
     }
